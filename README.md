@@ -1,9 +1,5 @@
 # MotoGP Championship API
 
-Deze API is de eerste uitwerking van de Node.js API Assignment, in de stijl van de cursus tot en met hoofdstuk 5.
-
-## Wat zit er nu in?
-
 - Express API met aparte route modules
 - Vier gelinkte data collections in arrays:
   - teams
