@@ -1,0 +1,12 @@
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    main
+      h1= message
+      p Een eenvoudige Express API voor MotoGP teams, riders, races en results.
+      h2 Beschikbare endpoints
+      ul
+        each endpoint in endpoints
+          li= endpoint

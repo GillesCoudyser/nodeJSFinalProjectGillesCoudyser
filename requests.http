@@ -1,0 +1,154 @@
+### Home page
+GET http://localhost:3000/
+
+### Static file
+GET http://localhost:3000/readme.txt
+
+### Get all teams
+GET http://localhost:3000/api/teams
+
+### Get one team
+GET http://localhost:3000/api/teams/1
+
+### Create team
+POST http://localhost:3000/api/teams
+Content-Type: application/json
+
+{
+    "name": "Honda HRC Castrol",
+    "country": "Japan",
+    "manufacturer": "Honda"
+}
+
+### Update team
+PUT http://localhost:3000/api/teams/2
+Content-Type: application/json
+
+{
+    "name": "Monster Energy Yamaha MotoGP",
+    "country": "Japan",
+    "manufacturer": "Yamaha"
+}
+
+### Delete team
+DELETE http://localhost:3000/api/teams/4
+
+### Get all riders
+GET http://localhost:3000/api/riders
+
+### Get one rider
+GET http://localhost:3000/api/riders/1
+
+### Create rider
+POST http://localhost:3000/api/riders
+Content-Type: application/json
+
+{
+    "firstName": "Alex",
+    "lastName": "Rins",
+    "number": 42,
+    "country": "Spain",
+    "teamId": 2
+}
+
+### Update rider
+PUT http://localhost:3000/api/riders/3
+Content-Type: application/json
+
+{
+    "firstName": "Fabio",
+    "lastName": "Quartararo",
+    "number": 20,
+    "country": "France",
+    "teamId": 2
+}
+
+### Delete rider
+DELETE http://localhost:3000/api/riders/5
+
+### Get all races
+GET http://localhost:3000/api/races
+
+### Get one race
+GET http://localhost:3000/api/races/1
+
+### Create race
+POST http://localhost:3000/api/races
+Content-Type: application/json
+
+{
+    "name": "Italian Grand Prix",
+    "round": 4,
+    "date": "2026-07-12",
+    "status": "planned",
+    "circuit": {
+        "name": "Mugello Circuit",
+        "country": "Italy",
+        "lengthKm": 5.25
+    }
+}
+
+### Update race
+PUT http://localhost:3000/api/races/3
+Content-Type: application/json
+
+{
+    "name": "Dutch TT",
+    "round": 3,
+    "date": "2026-06-28",
+    "status": "planned",
+    "circuit": {
+        "name": "TT Circuit Assen",
+        "country": "Netherlands",
+        "lengthKm": 4.54
+    }
+}
+
+### Delete race
+DELETE http://localhost:3000/api/races/3
+
+### Get all results
+GET http://localhost:3000/api/results
+
+### Get one result
+GET http://localhost:3000/api/results/1
+
+### Get results by race
+GET http://localhost:3000/api/results/race/1
+
+### Create result
+POST http://localhost:3000/api/results
+Content-Type: application/json
+
+{
+    "raceId": 2,
+    "riderId": 3,
+    "teamId": 2,
+    "position": 3,
+    "points": 16
+}
+
+### Update result
+PUT http://localhost:3000/api/results/5
+Content-Type: application/json
+
+{
+    "raceId": 2,
+    "riderId": 4,
+    "teamId": 3,
+    "position": 2,
+    "points": 20
+}
+
+### Delete result
+DELETE http://localhost:3000/api/results/5
+
+### Validation example
+POST http://localhost:3000/api/teams
+Content-Type: application/json
+
+{
+    "name": "A",
+    "country": "J",
+    "manufacturer": "D"
+}

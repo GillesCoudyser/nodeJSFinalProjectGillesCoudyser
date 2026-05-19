@@ -1,0 +1,22 @@
+{
+  "name": "eindopdrachtmotogp",
+  "version": "1.0.0",
+  "description": "MotoGP Championship API for the Node.js API assignment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "config": "^4.4.1",
+    "express": "^4.22.2",
+    "helmet": "^8.1.0",
+    "joi": "^18.2.1",
+    "morgan": "^1.10.1",
+    "pug": "^3.0.4"
+  }
+}
